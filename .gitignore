@@ -1,0 +1,4 @@
+# Bỏ qua thư mục 
+temp/
+models/
+src/__pycache__
