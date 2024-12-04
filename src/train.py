@@ -4,12 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OrdinalEncoder
 from model import define_model
 
-def preprocess_data(file_path):
-    """
-    Tiền xử lý dữ liệu từ tệp CSV.
-    """
-    df = pd.read_csv('data/processed/final_data.csv')
-    
+def preprocess_data(df):
     # Xử lý dữ liệu
     ordinal_features = [' khoa', ' hedt', ' chuyennganh2']
     df[ordinal_features] = df[ordinal_features].fillna('Unknown')
