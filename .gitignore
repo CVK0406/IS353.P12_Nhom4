@@ -1,5 +1,8 @@
 # Bỏ qua thư mục 
 temp/
-models/
+models/elastic_net_model.pkl
+models/light_gbm_model.pkl
+models/linear_regression_model.pkl
+models/random_forest_model.pkl
 src/__pycache__
 tests/__pycache__
