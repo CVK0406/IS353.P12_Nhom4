@@ -1,8 +1,8 @@
 import pandas as pd
 
-df1 = pd.read_csv('./data/raw/sinhvien_dtb_hocky.csv')
+df1 = pd.read_csv('C:\Steam Game\MXH\IS353.P12_Nhom4\data\raw\sinhvien_dtb_hocky.csv')
 
-df2 = pd.read_csv('./data/raw/01.sinhvien.csv')
+df2 = pd.read_csv('C:\Steam Game\MXH\IS353.P12_Nhom4\data\raw\01.sinhvien.csv')
 
 df1.shape
 
@@ -50,4 +50,4 @@ df_filtered = df_filtered.dropna(subset=['dtbhk2']).reset_index(drop=True)
 
 print(df_filtered[['mssv', 'dtbhk', 'dtbhk2']])
 
-df_filtered.to_csv('./data/processed/final_data.csv', index=False)
+df_filtered.to_csv(r'C:\Steam Game\MXH\IS353.P12_Nhom4\data\processed\final_data.csv', index=False)

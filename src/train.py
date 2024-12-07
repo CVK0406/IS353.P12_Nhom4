@@ -8,7 +8,8 @@ def preprocess_data(file_path):
     """
     Tiền xử lý dữ liệu từ tệp CSV.
     """
-    df = pd.read_csv('data/processed/final_data.csv')
+    df = pd.read_csv(r'C:\Steam Game\MXH\IS353.P12_Nhom4\data\processed\final_data.csv')
+
     
     # Xử lý dữ liệu
     ordinal_features = [' khoa', ' hedt', ' chuyennganh2']
