@@ -38,19 +38,19 @@
 ### **3.1. Xử lý dữ liệu**
 - Xử lý dữ liệu từ 2 file 01.sinhvien.csv và sinhvien_dtb_hocky.csv:
    ```bash
-   python src/xgboost_package/data_preprocessing.py
+   python src/xgboost-package/data_preprocessing.py
    ```
 ### **3.1. Huấn luyện và đánh giá mô hình**
 - Chạy các bước huấn luyện và đánh giá từ dòng lệnh:
    ```bash
-   python src/xgboost_package/train.py
-   python src/xgboost_package/evaluate.py
+   python src/xgboost-package/train.py --input data/processed/final_data.csv --output_dir models/
+   python src/xgboost-package/evaluate.py --model models/xgboost_model.pkl --input data/processed/final_data.csv
    ```
 
 ### **3.2. Huấn luyện và đánh giá mô hình qua giao diện Streamlit (Tùy chọn)**
 - Chạy ứng dụng:
    ```bash
-   streamlit run path_to_your_src_folder/xgboost_package/app.py
+   streamlit run path_to_your_src_folder/xgboost-package/app.py
    ```
 - Mở trình duyệt và truy cập: `http://localhost:8501`.
 
