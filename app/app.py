@@ -50,9 +50,9 @@ gioitinh = st.sidebar.selectbox("Giới tính (0: Nữ, 1: Nam)", [0, 1], index=
 khoahoc = st.sidebar.number_input("Khóa học", min_value=1.0, max_value=20.0, value=11.0, step=1.0)
 tinhtrang = st.sidebar.selectbox("Tình trạng", [0, 1], index=1)
 dtbhk2 = st.sidebar.number_input("Điểm trung bình học kỳ trước", min_value=0.0, max_value=10.0, value=7.5, step=0.1)
-khoa_mahoa = st.sidebar.selectbox("Khoa (1: HTTT, 2: HTTT, 3: HTTT, 4: HTTT, 5: HTTT)", [1, 2, 3, 4, 5], index=1)
-hedt_mahoa = st.sidebar.selectbox("Hệ đào tạo (1: HTTT, 2: HTTT, 3: HTTT, 4: HTTT, 5: HTTT)", [1, 2, 3, 4, 5], index=1)
-chuyennganh2_mahoa = st.sidebar.selectbox("Chuyên ngành 2 (1: HTTT, 2: HTTT, 3: HTTT, 4: HTTT, 5: HTTT)", [1, 2, 3, 4, 5], index=1)
+khoa_mahoa = st.sidebar.selectbox("Khoa (0: CNPM, 1: HTTT, 2: KHMT, 3: KTMT, 4: KTTT, 5: MMT&TT)", [0, 1, 2, 3, 4, 5], index=1)
+hedt_mahoa = st.sidebar.selectbox("Hệ đào tạo (0: CLC, 1: CNTN, 2: CQUI, 3: CTTT, 4: KSTN)", [0, 1, 2, 3, 4], index=1)
+chuyennganh2_mahoa = st.sidebar.selectbox("Chuyên ngành 2 (0: 7480201_CLCN, 1: 7480201_KHDL, 2: D480101, 3: D480102, 4: D480103, 5: D480104, 6: D480201, 7: D480299, 8: D520214, 9: D52480104, 10: 7480102, 11: 7480109)", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], index=1)
 
 # Chuẩn bị dữ liệu
 input_data = prepare_input_data(hocky, namhoc, sotchk, gioitinh, khoahoc, tinhtrang, dtbhk2, khoa_mahoa, hedt_mahoa, chuyennganh2_mahoa)
