@@ -12,9 +12,6 @@ def load_model(model_name):
     elif model_name == "LightGBM":
         with open(r"C:\Steam Game\MXH\IS353.P12_Nhom4\app\light_gbm_dtbhk_model.pkl", "rb") as file:
             return pickle.load(file)
-    elif model_name == "LightGBM":
-        with open(r"C:\Steam Game\MXH\IS353.P12_Nhom4\app\light_gbm_dtbhk_model.pkl", "rb") as file:
-            return pickle.load(file)
 
 # Hàm chuẩn bị dữ liệu đầu vào
 def prepare_input_data(hocky, namhoc, sotchk, gioitinh, khoahoc, tinhtrang, dtbhk2, khoa_mahoa, hedt_mahoa, chuyennganh2_mahoa):
