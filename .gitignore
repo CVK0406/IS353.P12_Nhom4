@@ -6,3 +6,7 @@ models/linear_regression_model.pkl
 models/random_forest_model.pkl
 src/__pycache__
 tests/__pycache__
+src/xgboost_package.egg-info
+dist/
+src/xgboost-package/__pycache__
+build/

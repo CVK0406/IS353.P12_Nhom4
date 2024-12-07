@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 from train import preprocess_data, train_model
-from evaluate import evaluate_model, plot_feature_importance
-from model import define_model
+from evaluate import evaluate_model
 import matplotlib.pyplot as plt
 
 # Khởi tạo ứng dụng Streamlit
