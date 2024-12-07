@@ -31,26 +31,26 @@
 
 4. Cài đặt dự án thành gói Python (tuỳ chọn):
    ```bash
-   pip install -e .
+   pip install .
    ```
 
 ## **3. Cách sử dụng**
 ### **3.1. Xử lý dữ liệu**
 - Xử lý dữ liệu từ 2 file 01.sinhvien.csv và sinhvien_dtb_hocky.csv:
    ```bash
-   python src/data_preprocessing.py
+   python src/xgboost_package/data_preprocessing.py
    ```
 ### **3.1. Huấn luyện và đánh giá mô hình**
 - Chạy các bước huấn luyện và đánh giá từ dòng lệnh:
    ```bash
-   python src/train.py
-   python src/evaluate.py
+   python src/xgboost_package/train.py
+   python src/xgboost_package/evaluate.py
    ```
 
 ### **3.2. Huấn luyện và đánh giá mô hình qua giao diện Streamlit (Tùy chọn)**
 - Chạy ứng dụng:
    ```bash
-   streamlit run path_to_your_src_folder/app.py
+   streamlit run path_to_your_src_folder/xgboost_package/app.py
    ```
 - Mở trình duyệt và truy cập: `http://localhost:8501`.
 
