@@ -2,30 +2,6 @@ import os
 import streamlit as st
 import pandas as pd
 import joblib
-from xgboost import XGBRegressor
-import lightgbm as lgb
-
-# Load các mô hình đã huấn luyện
-def load_model(model_name):
-    try:
-        if model_name == "XGBoost":
-            model_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'xgboost_model.pkl')
-        elif model_name == "LightGBM":
-            model_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'light_gbm_model.pkl')
-        else:
-            st.error("Mô hình không hợp lệ!")
-            return None
-
-        # Kiểm tra nếu tệp không tồn tại
-        if not os.path.exists(model_path):
-            st.error(f"Không tìm thấy mô hình: {model_path}")
-            return None
-
-        # Tải mô hình
-        return joblib.load(model_path)  
-    except Exception as e:
-        st.error(f"Lỗi khi tải mô hình: {e}")
-        return None
 
 # Hàm chuẩn bị dữ liệu đầu vào
 def prepare_input_data(hocky, namhoc, sotchk, gioitinh, khoahoc, tinhtrang, dtbhk2, khoa_mahoa, hedt_mahoa, chuyennganh2_mahoa):
@@ -50,17 +26,11 @@ def prepare_input_data(hocky, namhoc, sotchk, gioitinh, khoahoc, tinhtrang, dtbh
 # Giao diện Streamlit
 st.title("Dự đoán điểm trung bình học kỳ")
 
-# Chọn mô hình
-model_name = st.radio(
-    "Chọn mô hình để dự đoán:",
-    ("XGBoost", "LightGBM")
-)
-
 # Load mô hình đã chọn
-model = load_model(model_name)
+model = joblib.load('./models/xgboost_model.pkl')
 
 if model is not None:
-    st.write(f"Đã chọn mô hình: {model_name}")
+    st.write(f"Mô hình XGBoost: ")
 
     # Nhập dữ liệu từ người dùng
     hocky = st.sidebar.selectbox("Học kỳ ", [1, 2, 3, 4, 6, 7, 8], index=1)
