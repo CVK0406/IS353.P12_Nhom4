@@ -10,3 +10,4 @@ src/xgboost_package.egg-info
 dist/
 src/xgboost-package/__pycache__
 build/
+.venv
