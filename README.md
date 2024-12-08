@@ -52,8 +52,13 @@
    ```bash
    streamlit run path_to_your_src_folder/xgboost-package/app.py
    ```
-- Mở trình duyệt và truy cập: `http://localhost:8501`.
-
+   
+### **3.3. App dự đoán điểm trung bình**
+- Chạy ứng dụng:
+   ```bash
+   streamlit run path_to_your_app_folder/app.py
+   ```
+   
 ## **4. Cách kiểm thử**
 - Chạy các test case bằng **pytest**:
    ```bash
