@@ -69,7 +69,7 @@
 ### **5.1. Tiền xử lý dữ liệu**
 - Loại bỏ các outlier dựa trên IQR.
 - Hợp nhất dữ liệu từ nhiều nguồn (`sinhvien_dtb_hocky.csv`, `01.sinhvien.csv`).
-- Tạo biến phụ thuộc (`dtbhk2`) để phục vụ cho dự đoán.
+- Tạo biến độc lập (`dtbhk2`) để phục vụ cho dự đoán.
 
 ### **5.2. Mô hình dự đoán**
 - Sử dụng thuật toán **XGBoost** với các tham số:
